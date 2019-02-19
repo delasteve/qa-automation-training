@@ -1,0 +1,63 @@
+:host {
+  min-width: 320px;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    width: 60%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+mat-card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-height: 120px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    font-family: Georgia, serif;
+    content: '“';
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 5rem;
+    color: rgba(#222222, 0.8);
+    font-weight: normal;
+  }
+
+  &:after {
+    font-family: Georgia, serif;
+    content: '”';
+    position: absolute;
+    bottom: -110px;
+    line-height: 100px;
+    right: -32px;
+    font-size: 22rem;
+    color: rgba(#eee, 0.8);
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 80%;
+  }
+
+  cite {
+    font-size: 1rem;
+    margin-top: 10px;
+    display: block;
+    font-weight: 200;
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,3 @@
+<ng-container *ngFor="let quote of quotes$ | async">
+  <app-quote [id]="quote.id" [phrase]="quote.phrase" [attribution]="quote.attribution"></app-quote>
+</ng-container>

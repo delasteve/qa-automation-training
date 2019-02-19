@@ -1,0 +1,22 @@
+<mat-card class="mat-elevation-z3">
+  <div style="display: flex; align-items: center; justify-content: space-between">
+    <h1>{{ isEditing ? 'Edit' : 'Create' }} a Quote</h1>
+    <button *ngIf="isEditing" mat-icon-button color="warn" (click)="openDeleteConfirmationDialog()">
+      <mat-icon aria-label="Delete">delete</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <textarea matInput placeholder="Enter the phrase" formControlName="phrase"></textarea>
+      <mat-error *ngIf="form.get('phrase').invalid">Phrase cannot be empty.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Who said this?" formControlName="attribution" />
+      <mat-error *ngIf="form.get('attribution').invalid">Attribution cannot be empty.</mat-error>
+    </mat-form-field>
+    <mat-card-actions>
+      <a mat-button routerLink="/">Cancel</a>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
